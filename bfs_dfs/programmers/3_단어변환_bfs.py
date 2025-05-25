@@ -1,3 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 from collections import deque
 
 
@@ -32,3 +55,4 @@ def can_transform(word1, word2):
         if diff_count > 1:
             return False
     return diff_count == 1
+"""

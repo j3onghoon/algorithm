@@ -1,3 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 from collections import deque
 
 
@@ -23,3 +46,5 @@ def solution(n, computers):
             network_count += 1
 
     return network_count
+
+"""

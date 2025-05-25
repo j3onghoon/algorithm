@@ -1,6 +1,5 @@
 """
-DP
-Dynamic Programming
+DP - Dynamic Programming
 
 복잡한 문제를 더 작고 간단한 하위 문제로 나누어 해결하는 알고리즘.
 각 하위 문제의 결과를 저장(메모이제이션)하여 같은 계산을 반복하지 않음으로써 효율성을 높인다.
@@ -11,6 +10,39 @@ Dynamic Programming
 """
 
 def solution(numbers, target):
+    result = {0 : 0}
+    for number in numbers:
+        new_result = {}
+        for current_sum, count in result.items():
+            new_result[current_sum + number] = result.get(current_sum + number, 0) + count
+            new_result[current_sum - number] = result.get(current_sum - number, 0) + count
+        result = new_result
+
+    return result.get(target, 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+def solution(numbers, target):
     dp = {0: 1}
 
     for num in numbers:
@@ -20,3 +52,4 @@ def solution(numbers, target):
             next_dp[current_sum - num] = next_dp.get(current_sum - num, 0) + count
         dp = next_dp
     return dp.get(target, 0)
+"""

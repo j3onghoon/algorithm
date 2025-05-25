@@ -7,6 +7,43 @@
 # 항상 모듈 레벨의 전역 범위에서 변수를 찾는다.
 #
 # 단순연산 - 5회 이상 반복 연산하는 경우 저장하는 게 유리
+
+
+def solution(numbers, target):
+    answer = 0
+
+    N = len(numbers)
+    def dfs(idx, current_sum):
+        nonlocal answer
+
+        if idx == N and current_sum == target:
+            answer += 1
+        if idx < N:
+            dfs(idx + 1, current_sum + numbers[idx])
+            dfs(idx + 1, current_sum - numbers[idx])
+
+    dfs(0, 0)
+    return answer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 # 복잡한 연산 - 2회 이상 반복 연산하는 경우 저장하는 게 유리
 
 def solution(numbers, target):
@@ -26,3 +63,5 @@ def solution(numbers, target):
 
     dfs(0, 0)
     return count
+
+"""

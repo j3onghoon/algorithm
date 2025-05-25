@@ -1,3 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 from collections import deque
 
 
@@ -77,3 +100,4 @@ def find_shortest_path(field, characterX, characterY, itemX, itemY):
 #                 visited[nx][ny] = True
 #
 #     return -1
+"""

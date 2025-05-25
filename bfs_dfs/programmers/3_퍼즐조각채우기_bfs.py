@@ -1,14 +1,30 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 from collections import deque
 
 
 def solution(game_board, table):
-    # 1. 0을 찾는다.
-    # 2. 0을 기준으로 1이 나올 때까지를 찾는다. 도형 찾기
-    # 3. 도형을 복사해온다. 기존 도형은 1로 채운다.
-    # 4. 해당 리스트가 table에 있는지 확인한다.
-    # 5. 직사각형을 돌려가며 찾는다.
-    # 6. 직사각형이 table에 있다면 칸 수만큼 +한다.
-
     n = len(game_board)
     answer = 0
 
@@ -34,7 +50,7 @@ def solution(game_board, table):
 
 def find_blocks(board, target):
     n = len(board)
-    visited = [[False] for _ in range(n) for _ in range(n)]
+    visited = [[False for _ in range(n)] for _ in range(n)]
     blocks = []
 
     for i in range(n):
@@ -76,3 +92,4 @@ def can_match(space, piece):
             return True
         rotated = rotate(rotated)
     return False
+"""

@@ -1,3 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 def solution(n, computers):
     def dfs(node, visited):
         visited[node] = True
@@ -15,3 +38,4 @@ def solution(n, computers):
             network_count += 1
 
     return network_count
+"""

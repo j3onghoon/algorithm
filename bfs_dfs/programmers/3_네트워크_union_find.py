@@ -1,10 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 """
 union-find 알고리즘에서 rank는 최적화에 사용된다.
 
 rank없이 수행하면 트리가 한쪽으로 치우쳐 연결리스트처럼 되어 O(N)이 될 수 있다.
 rank를 사용하면 O(log n)
 rank + 경로압축
-"""
+
 
 def solution(n, computers):
     def find_parent(parent, x):
@@ -37,3 +60,4 @@ def solution(n, computers):
         unique_networks.add(find_parent(parent, i))
 
     return len(unique_networks)
+"""
